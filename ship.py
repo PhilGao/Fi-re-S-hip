@@ -1,9 +1,11 @@
 # coding=utf-8
 import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+class Ship(Sprite):
     #init the ship class
     def __init__(self,screen,ai_settings):
+        super(Ship, self).__init__()
         self.screen = screen
         # image init , load image
         self.image = pygame.image.load('images/ship.bmp')
